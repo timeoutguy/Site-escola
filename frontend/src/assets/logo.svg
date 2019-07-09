@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 150px;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        text-anchor: middle;
+        font-family: Literal;
+      }
+
+      .cls-2 {
+        font-size: 60px;
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="299" y="337" width="382" height="132" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="5" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.828"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="183" y="459" width="634" height="213" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="5" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.828"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="ETEC" class="cls-1" x="486.838" y="452.369"><tspan x="486.838">ETEC</tspan></text>
+  <text id="TExto" class="cls-2" x="489.25" y="440.348"><tspan x="489.25" dy="72">Prof. Marcos Uchôas </tspan><tspan x="489.25" dy="72">dos Santos Penchel</tspan><tspan x="489.25" dy="72">			Cachoeira Paulista</tspan></text>
+</svg>

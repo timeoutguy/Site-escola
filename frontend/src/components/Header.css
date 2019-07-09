@@ -1,0 +1,26 @@
+header#main-header{
+    background: #7159c1;
+    height: 72px;
+    border-bottom: 1px solid #DDD;
+}
+.header-content{
+    width: 100%;
+    margin: 0 auto;
+    height: 72px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-content-right .images-svg{
+    margin: 10px;
+}
+.images-svg{
+    height: 32px;
+    width: 32px;
+}
+.images-svg-logo{
+    height: 150px;
+    width: 125px;
+}

@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import Cursos from './pages/Cursos/Cursos';
 import Noticias from './pages/Noticias/Noticias';
 import Contato from './pages/Contato/Contato';
+import Dashboard from './pages/Dashboard/Dashboard'
+import CriarNoticias from './pages/CriarNoticias/CriarNoticias'
 
 
 export default function Routes(){
@@ -12,8 +14,10 @@ export default function Routes(){
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/cursos' component={Cursos} />
-            <Route path='/noticias' component={Noticias} />
+            <Route exact path='/noticias' component={Noticias} />
             <Route path='/contato' component={Contato} />
+            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/noticias/criar' component={CriarNoticias} />
         </Switch>
     )
 }

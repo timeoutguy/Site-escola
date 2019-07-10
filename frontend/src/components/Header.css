@@ -1,26 +1,44 @@
 header#main-header{
     background: #7159c1;
     height: 72px;
-    border-bottom: 1px solid #DDD;
+    border-bottom: solid 1px #DDD;
 }
-.header-content{
+
+header#main-header .header-content{
     width: 100%;
+    max-width: 980px;
     margin: 0 auto;
     height: 72px;
     padding: 0 30px;
-
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
-.header-content-right .images-svg{
+
+.images-svg{
+    width: 32px;
+    height: 32px;
     margin: 10px;
 }
-.images-svg{
-    height: 32px;
-    width: 32px;
+.header-items{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
 }
-.images-svg-logo{
-    height: 150px;
-    width: 125px;
+.header-link{
+    display: inline;
+    
+}
+.item{
+    color: white;
+    font-size: 20px;
+    margin: 4px; 
+    transition: all 150ms linear 0s;
+}
+.item:hover{   
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
+
 }

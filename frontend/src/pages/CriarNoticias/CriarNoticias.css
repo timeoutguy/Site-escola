@@ -1,0 +1,28 @@
+.content{
+    background: #FFFFFF;
+    margin: 70px auto;
+    padding: 0 30px;
+    max-width: 100%;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #565656;
+    border-radius: 10px;
+}
+.form-content{
+    padding: 20px;
+}
+.form-control{
+    margin-bottom: 15px; 
+    border-radius: 10px;
+}
+.form-control-file{
+    border: none;
+}
+.form-button{
+    margin: 20px auto;
+    max-width: 100%;
+    width: 400px;
+    border-radius: 10px;   
+}

@@ -1,0 +1,62 @@
+.dashboard-title{
+    margin-top: 20px;
+    background: -webkit-linear-gradient(left, rgba(182,92,255,1) 0%, rgba(132,0,240,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color:white;
+    padding: 5px;
+}
+.dashboard-button {
+    background: white;
+    color: #593196;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.6s;
+    font-size: 16px;
+}
+.dashboard-button:hover{
+    text-decoration: none;
+    background: #593196;
+    color: white;
+}
+.dashboard-content{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.dashboard-card{
+    margin: 10px;
+    max-width: 320px;
+}
+.svg-image{
+    height: 24px;
+}
+.dashboard-actions{
+    display: flex;
+    justify-content: space-between;
+}
+.edit-button{
+    background: #593196;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.edit-button:hover{
+    color:white;
+    text-decoration: none;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.delete-button{
+    color: white;
+    background: #ff0000;
+    padding: 10px;
+    border-radius: 10px;
+}

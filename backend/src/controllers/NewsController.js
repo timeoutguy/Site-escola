@@ -18,7 +18,7 @@ module.exports = {
         const fileName = `${name}.jpg`
 
         await sharp(req.file.path)
-            .resize(200)
+            .resize(300, 180)
             .jpeg({quality: 70})
             .toFile(
                 path.resolve(req.file.destination, 'resized', fileName)
@@ -35,5 +35,20 @@ module.exports = {
         })
 
         return res.json(news)
+    },
+    async show(req, res){
+        const news = await News.findById(req.params.id);
+
+        return res.json(news);
+    },
+    async update(req, res){
+        const news = await News.findByIdAndUpdated(req.params.id, req.body, { new: true });
+
+        return res.json(news);
+    },
+    async destroy(req, res){
+        await News.findByIdAndRemove(req.params.id)
+
+        return res.send();
     }
 }

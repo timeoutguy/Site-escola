@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Container } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 import './CriarNoticias.css'
 import api from '../../services/api'
 export default class CriarNoticias extends Component {
@@ -43,6 +43,7 @@ export default class CriarNoticias extends Component {
             type="text" 
             name="title" 
             placeholder="Titulo da notícia" 
+            required='true'
             onChange={this.handleChange}
             value={this.state.title}
           />
@@ -51,6 +52,7 @@ export default class CriarNoticias extends Component {
             type="text" 
             name="author" 
             placeholder="Autor da notícia" 
+            required='true'
             onChange={this.handleChange}
             value={this.state.author}
           />
@@ -59,6 +61,7 @@ export default class CriarNoticias extends Component {
             type="text" 
             name="description" 
             placeholder="Descrição da notícia" 
+            required='true'
             onChange={this.handleChange}
             value={this.state.description}
           />
@@ -66,7 +69,8 @@ export default class CriarNoticias extends Component {
             className='form-control' 
             as="textarea" 
             name="body" 
-            placeholder="Corpo da notícia" 
+            placeholder="Corpo da notícia"
+            required='true' 
             onChange={this.handleChange}
             value={this.state.body}
           />
@@ -76,6 +80,7 @@ export default class CriarNoticias extends Component {
           className='form-control-file' 
           type="file"
           name="image"
+          required='true'
           onChange={this.handleImageChange}
           />
           <Button className='form-button'type='submit'> Enviar Notícia </Button> 

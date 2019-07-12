@@ -1,11 +1,56 @@
 import React, { Component } from 'react';
+import { Container, Col, Row, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 import './Home.css'
 
 export default class Home extends Component {
   render() {
     return(
-        <h1>Home</h1>
+      <React.Fragment>
+        <div>
+          <Container>
+            <Row className='row-first'>
+              <Col className='col-first'>
+                <h1> Os melhores cursos técnico em Cachoeira Paulista, além do ensino médio.</h1>
+                <p className> Na ETEC Prof.º Marcos Uchôas dos Santos Penchel você encontra o melhor ensino técnico de Cachoeira Paulista.
+                Também encontra um ótimo ensino médio.  
+                </p>
+                <Link className='link-button'to='/cursos'> Cursos </Link>
+              </Col>
+              <Col> 
+                <img id='classrom-svg' src={require('./assets/classroom.svg')}></img> 
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div className='second-div'>
+          <Container>
+            <Row className='row-second'>
+              <Col >
+                <img id='data-svg' src={require('./assets/data.svg')}></img> 
+              </Col>
+              <Col className='col-second'> 
+                <h1> No curso de Desenvolvimento de sistemas você aprende programação-web, programaçãp orientada ao objeto, 
+                  banco de dados e mais.</h1>
+              </Col>
+            </Row>
+            </Container>
+        </div>
+        <div className='third-div'>
+          <Container>
+            <Row className='row-third'>
+              <Col >
+                <h1> No curso de Desenvolvimento de sistemas você aprende programação-web, programaçãp orientada ao objeto, 
+                banco de dados e mais.</h1> 
+              </Col>
+              <Col className='col-third'> 
+                <img id='motherboard-svg' src={require('./assets/motherboard.svg')}></img>
+              </Col>
+            </Row>
+            </Container>
+        </div>
+      </React.Fragment>
     )
   }
 }

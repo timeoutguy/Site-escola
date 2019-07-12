@@ -27,7 +27,7 @@ export default class Noticias extends Component {
                       <p> <h6>Escrito por {News.author}</h6> </p>
                       <span className='card-description'>{News.description}</span>
                     </Card.Text>
-                    <Link className='card-button'>Ler mais</Link>
+                    <Link to={`/noticas/${News.title}`} className='card-button'>Ler mais</Link>
                   </Card.Body>
                 </div>
               </Card>

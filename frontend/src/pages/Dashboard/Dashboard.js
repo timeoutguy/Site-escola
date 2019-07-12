@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Card, Modal, Button } from 'react-bootstrap';
+import { Container, Row, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
-
-import Delete from './assets/delete.svg';
-import Edit from './assets/edit.svg';
 
 import './Dashboard.css';
 
@@ -17,6 +14,13 @@ export default class Dashboard extends Component {
 
         this.setState({news: response.data});
     }
+
+    handlerDelete = async id => {
+      await api.delete(`news/${id}`)
+
+      window.location.reload()
+      
+    }
     render() {
         return(
             <Container>
@@ -25,7 +29,7 @@ export default class Dashboard extends Component {
                 </Row>
                     {this.state.news.map(News => (
                        <Row>
-                       <Card className='card'>
+                       <Card className='dashboard-card'>
                          <div className='card-horizontal'>
                            <Card.Img className='card-image' src={`http://localhost:3333/files/${News.image}`} />
                            <Card.Body>
@@ -34,14 +38,9 @@ export default class Dashboard extends Component {
                                <p> <h6>Escrito por {News.author}</h6> </p>
                                <span className='card-description'>{News.description}</span>
                              </Card.Text>
-                             <div className='buttons'>
-                             <Link className='edit-button'>
-                                Editar <img className='svg-image' src={require('./assets/edit.svg')}></img>
-                             </Link>
-                             <Link className='delete-button'>
+                             <Button className='delete-button'onClick={() => this.handlerDelete(News._id)}>
                                 <img className='svg-image' src={require('./assets/delete.svg')}></img>
-                             </Link>
-                             </div>
+                             </Button>
                            </Card.Body>
                          </div>
                        </Card>

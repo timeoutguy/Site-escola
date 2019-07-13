@@ -34,30 +34,30 @@
     border: 1px solid #7159c1;
     text-decoration: none;
 }
-.second-div{
+.purple-div{
     background: #7159c1;
 }
-.row-second{
+.row-purple{
     padding: 60px 30px;
 }
-.col-second > h1{
+.col-purple > h1{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
 }
+.col-third > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 .row-third{
     padding: 60px 30px;
 }
-#classrom-svg{
+.white-svg{
     margin-left: 240px;
     height: 278px;
 }
-#data-svg{
+.purple-svg{
     margin-right: 100px;
-    height: 278px;
-}
-#motherboard-svg{
-    margin-left: 240px;
     height: 278px;
 }
 

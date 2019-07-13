@@ -19,18 +19,18 @@ export default class Home extends Component {
                 <Link className='link-button'to='/cursos'> Cursos </Link>
               </Col>
               <Col> 
-                <img id='classrom-svg' src={require('./assets/classroom.svg')}></img> 
+                <img className='white-svg' src={require('./assets/classroom.svg')}></img> 
               </Col>
             </Row>
           </Container>
         </div>
-        <div className='second-div'>
+        <div className='purple-div'>
           <Container>
-            <Row className='row-second'>
+            <Row className='row-purple'>
               <Col >
-                <img id='data-svg' src={require('./assets/data.svg')}></img> 
+                <img className='purple-svg' src={require('./assets/data.svg')}></img> 
               </Col>
-              <Col className='col-second'> 
+              <Col className='col-purple'> 
                 <h1> No curso de Desenvolvimento de sistemas você aprende programação-web, programaçãp orientada ao objeto, 
                   banco de dados e mais.</h1>
               </Col>
@@ -40,12 +40,25 @@ export default class Home extends Component {
         <div className='third-div'>
           <Container>
             <Row className='row-third'>
-              <Col >
+              <Col className='col-third'>
                 <h1> No curso de Desenvolvimento de sistemas você aprende programação-web, programaçãp orientada ao objeto, 
                 banco de dados e mais.</h1> 
               </Col>
-              <Col className='col-third'> 
-                <img id='motherboard-svg' src={require('./assets/motherboard.svg')}></img>
+              <Col> 
+                <img className='white-svg' src={require('./assets/motherboard.svg')}></img>
+              </Col>
+            </Row>
+            </Container>
+        </div>
+        <div className='purple-div'>
+          <Container>
+            <Row className='row-purple'>
+              <Col >
+                <img className='purple-svg' src={require('./assets/analysis.svg')}></img> 
+              </Col>
+              <Col className='col-purple'> 
+                <h1> No curso de Desenvolvimento de sistemas você aprende programação-web, programaçãp orientada ao objeto, 
+                  banco de dados e mais.</h1>
               </Col>
             </Row>
             </Container>

@@ -42,7 +42,7 @@ module.exports = {
         return res.json(news);
     },
     async update(req, res){
-        const news = await News.findByIdAndUpdated(req.params.id, req.body, { new: true });
+        const news = await News.findOneAndUpdate(req.params.id, req.body, { new: true });
 
         return res.json(news);
     },

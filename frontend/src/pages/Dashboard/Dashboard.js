@@ -30,19 +30,17 @@ export default class Dashboard extends Component {
                     {this.state.news.map(News => (
                        <Row>
                        <Card className='dashboard-card'>
-                         <div className='card-horizontal'>
-                           <Card.Img className='card-image' src={`http://localhost:3333/files/${News.image}`} />
+                           <Card.Img className='dasboard-card-image' src={`http://localhost:3333/files/${News.image}`} />
                            <Card.Body>
                              <Card.Title> <h2>{News.title}</h2> </Card.Title>
                              <Card.Text>
                                <p> <h6>Escrito por {News.author}</h6> </p>
-                               <span className='card-description'>{News.description}</span>
+                               <span className='dashboard-card-description'>{News.description}</span>
                              </Card.Text>
                              <Button className='delete-button'onClick={() => this.handlerDelete(News._id)}>
                                 <img className='svg-image' src={require('./assets/delete.svg')}></img>
                              </Button>
                            </Card.Body>
-                         </div>
                        </Card>
                      </Row>
                     ))}

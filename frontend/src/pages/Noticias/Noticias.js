@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import api from '../../services/api'
-import './Noticias.css'
 import { Container, Row, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { distanceInWords} from 'date-fns'
+import pt from 'date-fns/locale/pt'
+import './Noticias.css'
+
 
 export default class Noticias extends Component {
   state = {
@@ -20,14 +23,18 @@ export default class Noticias extends Component {
             <Row>
               <Card className='card'>
                 <div className='card-horizontal'>
+                  <Card.Header>  
+                    <Card.Title> <h2>{News.title}</h2> </Card.Title>
+                    <p> <h6>Escrito por {News.author} há {distanceInWords(News.createdAt, new Date(), {
+                      locale: pt 
+                    })}</h6> </p>
+                    <span className='card-description'>{News.description}</span>
+                  </Card.Header>
                   <Card.Img className='card-image' src={`http://localhost:3333/files/${News.image}`} />
                   <Card.Body>
-                    <Card.Title> <h2>{News.title}</h2> </Card.Title>
                     <Card.Text>
-                      <p> <h6>Escrito por {News.author}</h6> </p>
-                      <span className='card-description'>{News.description}</span>
+                      <p className='news-content'> {News.body} </p> 
                     </Card.Text>
-                    <Link to={`/noticas/${News.title}`} className='card-button'>Ler mais</Link>
                   </Card.Body>
                 </div>
               </Card>

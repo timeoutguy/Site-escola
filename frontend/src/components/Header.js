@@ -17,7 +17,7 @@ export default function Header() {
             <li className='header-link'> <Link to='/' className='item'>Home</Link></li>
             <li className='header-link'> <Link to='/cursos' className='item'>Cursos</Link></li>
             <li className='header-link'> <Link to='/noticias' className='item'>Notícias</Link></li>
-            <li className='header-link'> <Link to='/contato' className='item'>Contato</Link></li>
+            <li className='header-link'> <Link to='/localizacao' className='item'>Localização</Link></li>
           </ul>
             <Link to='/'>
                 {/* <img src={logo} className='images-svg-logo' alt='ETEC Prof. Marcos Uchôas dos Santos Penchel'></img> */}
